@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <script>
+      function Validation() {
+        var rn = document.getElementById("roll");
+        if (rn.value == "") {
+          document.getElementById("txtroll").style.color = "red";
+        } else {
+          document.getElementById("txtroll").style.color = "black";
+        }
+        var el = document.getElementsByName("cb");
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <p>hello</p>
+      <h1>Student Registration Form</h1>
+      <form method="get" action=" ">
+        <table border="1" cellspacing="0">
+          <tr>
+            <td><label for="" id="txtroll">Roll No</label></td>
+            <td>
+              <input
+                type="text"
+                id="roll"
+                name="roll"
+                onmouseover="mouseoverroll();"
+                onmouseout="mouseoutroll();"
+              />
+              <div id="mousetext"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>Student Name:</td>
+            <td><input type="text" id="sname" name="sname" /></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" id="pwd" name="pwd" /></td>
+          </tr>
+
+          <tr>
+            <td>Section</td>
+            <td>
+              <input type="radio" id="sec" nme="sec" value="A" />Sec A <br />
+              <input type="radio" id="sec" nme="sec" value="B" />Sec B <br />
+            </td>
+          </tr>
+          <tr>
+            <td>Electives</td>
+            <td>
+              <input type="radio" id="cb1" nme="cb" value="cs401" />Java <br />
+              <input type="radio" id="cb2" nme="cb" value="cs402" />Java <br />
+              <input type="radio" id="cb3" nme="cb" value="cs403" />Java <br />
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <textarea name="addr" id="addr"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                type="button"
+                id="sb"
+                value="Submit"
+                onclick="Validation();"
+              />
+              <input type="reset" id="rb" name="rb" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+  <script>
+    function mouseoverroll() {
+      document.getElementById("mousetext").innerHTML = "xxxx-xx-xx-xxx-xxx";
+      document.getElementById("mousetext").style.color = "red";
+    }
+
+    function mouseoutroll() {
+      document.getElementById("mousetext").innerHTML = "";
+      document.getElementById("mousetext").style.color = "black";
+    }
+  </script>
+</html>
