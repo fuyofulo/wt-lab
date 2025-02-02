@@ -77,13 +77,96 @@
 
             <div>Rating: <span><input type="range" min="1" max="10" id="raitng"></span></div><br>
 
-            <button>Submit</button> 
-            <button>Reset</button>
+            <button type="button" onclick="ValidateForm()">Submit</button>
+            <button  >Reset</button>
 
 
         </form>
 
     </div>
 </body>
+
+<script>
+
+    function ValidateForm() {
+
+        const name = document.getElementById("name").value;
+        const idNo = document.getElementById("idno").value;
+        const password = document.getElementById("password").value;
+        const cpassword = document.getElementById("cpassword").value;
+        const phoneNo = document.getElementById("phoneNo").value;
+        const email = document.getElementById("emailID").value;
+        const address = document.getElementById("address").value;
+
+        // const phonePattern=/^\d{10}$/; 
+        // const namePattern=/^[a-zA-Z\s]+/; 
+        // const idPattern=/^1604-\d{2}-733-\d{3}$/; 
+        // const strPasswordPattern=/^(?=.*[a-z])(?=.*[AZ])(?=.*\d)(?=.*[!@#$%^&*()+<>,./?;:'"{}-]).{8,}$/; 
+        // const emailpattern=/[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
+
+        if(name===""){ 
+            alert("Please Enter Your Name"); 
+            return false; 
+        } 
+        
+        // if(!namePattern.test(name)){ 
+        //     alert("Please enter a valid name"); 
+        //     return false; 
+        // } 
+
+        if(phoneNo===""){ 
+            alert("Please Enter Your Phone Number"); 
+            return false; 
+        } 
+
+        // if(!phonePattern.test(phone)){ 
+        //     alert("Please enter valid 10 digits"); 
+        //     return false; 
+        // } 
+
+        if(idNo===""){ 
+            alert("ID is required"); 
+            return false; 
+        } 
+
+        // if(!idPattern.test(id)){ 
+        //     alert("Please enter valid ID"); 
+        //     return false; 
+        // } 
+
+        if(password===""){ 
+            alert("Choose your password"); 
+            return false; 
+        } 
+
+        // if(!strPasswordPattern.test(pwd)){ 
+        //     alert("Please Choose a Strong Password\nA strong Password is of minimum length 8 and consists of at least 1 alphabet of upper and lower cases, a number, a special character"); 
+        //     return false; 
+        // }  
+
+        if(cpassword==="" || cpassword!=password){ 
+            alert("Re-enter the same password"); 
+            return false; 
+        } 
+
+        if(email===""){ 
+            alert("E-Mail is required"); 
+            return false; 
+        } 
+
+        // if(!emailpattern.test(mail)){ 
+        //     alert("Please enter valid Email"); 
+        //     return false; 
+        // }
+
+        alert("Submitted successfully!");
+        return true;
+
+    }
+
+
+
+</script>
 
 </html>
