@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center">
+
+        <h2>Student Registration Form</h2>
+
+        <form>
+
+            <div>Name: <span><input placeholder="aziz ahmed" id="name" type="text"></span></div><br>
+
+            <div>ID No: <span><input placeholder="1604-21-733-037" id="idno" type="text"></span></div><br>
+            
+            <div>Password: <span><input placeholder="********" id="password" type="password"></span></div><br>
+
+            <div>Confirm Password: <span><input placeholder="*********" id="cpassword" type="password"></span></div><br>
+
+            <div>Branch: 
+                <span>
+                <select id="branch">
+                    <option>-</option>
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>IT</option>
+                    <option>CIVIL</option>
+                    <option>MECH</option>
+                </select>
+                </span>
+            </div><br>
+
+            <div>Semester: 
+                <span>
+                <select id="semester">
+                    <option>-</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+                </span>
+            </div><br>
+
+
+            <datalist id="subjects">
+                <option value="-">-</option>
+                <option value="PPS"></option>
+                <option value="BEE"></option>
+                <option value="BE"></option>
+                <option value="JAVA"></option>
+                <option value="AI"></option>
+                <option value="CD"></option>
+            </datalist>
+
+            <div>Subject: <span><input list="subjects" id="subject"></span></div><br>
+
+            <div>Section: <span><input type="radio" id="secA">A</input><input type="radio" id="secB">B</input></span></div><br>
+
+            <div>Electives: <span><input type="checkbox">Python</input><input type="checkbox">Java</input><input type="checkbox">C++</input></span></div><br>
+
+            <div>Phone No: <span><input placeholder="9360143403" id="phoneNo" type="text"></span></div><br>
+
+            <div>Email ID: <span><input placeholder="azizahmed@gmail.com" id="emailID" type="email"></span></div><br>
+
+            <div>Address: <span><textarea placeholder="12-2-24/5" id="address" type="text"></textarea></span></div><br>
+
+            <div>Rating: <span><input type="range" min="1" max="10" id="raitng"></span></div><br>
+
+            <button>Submit</button> 
+            <button>Reset</button>
+
+
+        </form>
+
+    </div>
+</body>
+
+</html>

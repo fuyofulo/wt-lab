@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    
+    <h1 id="greeting">Hello world</h1>
+
+    <div>Random Number <span id="randomnumber"></span></div>
+
+    <div>Last Modified: <span id="time"></span></div>
+    
+</body>
+
+<script>
+
+    document.getElementById("greeting").innerHTML = getGreeting();
+
+    function getGreeting() { 
+            
+        const hour = new Date().getHours(); 
+        console.log(hour);
+            if (hour < 12) { 
+                return "Good Morning!"; 
+            } else if (hour < 18) { 
+                return "Good Afternoon!"; 
+            } else { 
+                return "Good Evening!"; 
+        } 
+    } 
+
+    document.getElementById("time").innerHTML = latestTime();
+
+    function latestTime () {
+        const time = new Date().toLocaleDateString();
+        return time;
+    }
+
+    document.getElementById("randomnumber").innerHTML = generateNumber();
+
+    function generateNumber() {
+        const number = Math.random()*1000;
+        number1 = Math.floor(number);
+        return number1;
+    }
+
+</script>
+</html>
